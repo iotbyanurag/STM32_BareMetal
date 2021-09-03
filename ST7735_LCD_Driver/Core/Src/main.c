@@ -104,6 +104,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+	  // Using UART2 transmit the characters to the serial terminal.
 	  HAL_UART_Transmit(&huart2, data, 5, 1000);
 	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 	  HAL_Delay(1000);
