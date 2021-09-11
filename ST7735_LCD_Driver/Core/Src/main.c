@@ -113,15 +113,9 @@ int main(void)
 	  // Using UART2 transmit the characters to the serial terminal.
 	  //HAL_UART_Transmit(&huart2, data, 5, 1000);
 
-
 	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-//	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
-
-	 // HAL_SPI_Transmit(&hspi2, data, 5, 1000);
 	  HAL_Delay(1000);
 
-
-//	  Set_BoardLed_LOW();
   }
   /* USER CODE END 3 */
 }
