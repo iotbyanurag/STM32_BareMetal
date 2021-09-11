@@ -1,0 +1,20 @@
+20:42:36 **** Incremental Build of configuration Debug for project ST7735_LCD_Driver ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/ST7735_Interfaces.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/ST7735_Interfaces.d" -MT"Core/Src/ST7735_Interfaces.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ST7735_Interfaces.o"
+arm-none-eabi-gcc -o "ST7735_LCD_Driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\anura\STM32CubeIDE\bare_metal_workspace\ST7735_LCD_Driver\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7735_LCD_Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7735_LCD_Driver.elf
+ 
+arm-none-eabi-size   ST7735_LCD_Driver.elf 
+arm-none-eabi-objdump -h -S  ST7735_LCD_Driver.elf  > "ST7735_LCD_Driver.list"
+arm-none-eabi-objcopy  -O binary  ST7735_LCD_Driver.elf  "ST7735_LCD_Driver.bin"
+   text	   data	    bss	    dec	    hex	filename
+  15656	     24	   1936	  17616	   44d0	ST7735_LCD_Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: ST7735_LCD_Driver.bin
+ 
+Finished building: ST7735_LCD_Driver.list
+ 
+
+20:42:38 Build Finished. 0 errors, 0 warnings. (took 1s.607ms)
+

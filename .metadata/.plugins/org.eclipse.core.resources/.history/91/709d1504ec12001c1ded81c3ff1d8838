@@ -1,0 +1,15 @@
+/*
+ * Flash_W25QX.h
+ *
+ *  Created on: Sep 11, 2021
+ *      Author: anura
+ */
+
+#ifndef INC_FLASH_W25QX_H_
+#define INC_FLASH_W25QX_H_
+
+
+
+uint8_t	W25qxx_Spi(uint8_t	Data);
+
+#endif /* INC_FLASH_W25QX_H_ */

@@ -1,0 +1,2 @@
+ST7735_Interfaces.c:10:6:LCD_Init	8	static
+ST7735_Interfaces.c:15:6:LCD_SetMode	4	static

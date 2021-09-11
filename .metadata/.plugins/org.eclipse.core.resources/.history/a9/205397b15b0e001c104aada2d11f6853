@@ -1,0 +1,15 @@
+/*
+ * ST7735_Interfaces.c
+ *
+ *  Created on: Sep 5, 2021
+ *      Author: anura
+ */
+
+void LCD_Init(){
+	HAL_GPIO_WritePin(GPIOB, CS_PIN, GPIO_PIN_SET);
+
+}
+
+void LCD_SetMode(){
+
+}

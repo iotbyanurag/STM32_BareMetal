@@ -1,0 +1,17 @@
+/*
+ * Flash_W25QX.c
+ *
+ *  Created on: Sep 11, 2021
+ *      Author: anura
+ */
+
+#include "Flash_W25QX.h"
+
+SPI_HandleTypeDef hspi2;
+
+uint8_t	W25qxx_Spi(uint8_t	Data)
+{
+	uint8_t	ret;
+	HAL_SPI_TransmitReceive(&_W25QXX_SPI,&Data,&ret,1,100);
+	return ret;
+}
