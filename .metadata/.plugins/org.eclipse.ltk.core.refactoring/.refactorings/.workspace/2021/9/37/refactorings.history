@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;ST7735_LCD_Driver/Core/Inc/st7735_Interfaces.h&apos;" deleteContents="false" description="Delete resource &apos;ST7735_LCD_Driver/Core/Inc/st7735_Interfaces.h&apos;" element1="/ST7735_LCD_Driver/Core/Inc/st7735_Interfaces.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1630853053128"/>
-</session>
