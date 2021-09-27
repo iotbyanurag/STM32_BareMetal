@@ -1,2 +1,10 @@
 Flash_W25QX.c:12:9:W25qxx_Spi	32	static
 Flash_W25QX.c:19:10:W25qxx_ReadID	24	static
+Flash_W25QX.c:35:9:W25qxx_readStatusRegister_1	16	static
+Flash_W25QX.c:47:6:W25qxx_EnableDataWrite	8	static
+Flash_W25QX.c:61:6:W25qxx_DisableDataWrite	8	static
+Flash_W25QX.c:81:6:W25qxx_PageProgram	16	static
+Flash_W25QX.c:111:6:isWriteENableLatch_Set	16	static
+Flash_W25QX.c:122:6:isBusyBit_Set	16	static
+Flash_W25QX.c:133:6:W25qxx_EraseSector	16	static
+Flash_W25QX.c:148:10:W25qxx_ReadData	32	static

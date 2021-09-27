@@ -109,6 +109,20 @@ int main(void)
   uint8_t RxData;
   uint32_t FLASH_ID;
 
+
+  W25qxx_EnableDataWrite();
+  RxData = W25qxx_readStatusRegister_1();
+  while(isWriteENableLatch_Set() != true);
+
+	W25qxx_EraseSector();
+	while(isBusyBit_Set()==true);
+	HAL_Delay(1000);
+	 W25qxx_EnableDataWrite();
+	 while(isWriteENableLatch_Set() != true);
+	W25qxx_PageProgram();
+	HAL_Delay(1000);
+
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -117,9 +131,17 @@ int main(void)
 
 	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 	//HAL_SPI_TransmitReceive(&hspi2, &TxData, &RxData, 1, 500);
-	FLASH_ID = W25qxx_ReadID();
+	//FLASH_ID = W25qxx_ReadID();
+	FLASH_ID = W25qxx_ReadData();
+
+//	W25qxx_DisableDataWrite();
+	//RxData = W25qxx_readStatusRegister_1();
+
+
+
+
 	HAL_Delay(500);
-    HAL_UART_Transmit(&huart2, &FLASH_ID, 4 ,1000);
+    HAL_UART_Transmit(&huart2, &RxData, 4 ,1000);
 //	HAL_UART_Transmit(&huart2, "HELLO", 4,1000);
   }
   /* USER CODE END 3 */
