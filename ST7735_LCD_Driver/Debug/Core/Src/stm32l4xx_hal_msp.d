@@ -29,7 +29,7 @@ Core/Src/stm32l4xx_hal_msp.o: ../Core/Src/stm32l4xx_hal_msp.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Core/Inc/ST7735_Interfaces.h
+ ../Core/Inc/st7735.h ../Core/Inc/font5x7.h
 
 ../Core/Inc/main.h:
 
@@ -93,4 +93,6 @@ Core/Src/stm32l4xx_hal_msp.o: ../Core/Src/stm32l4xx_hal_msp.c \
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
 
-../Core/Inc/ST7735_Interfaces.h:
+../Core/Inc/st7735.h:
+
+../Core/Inc/font5x7.h:

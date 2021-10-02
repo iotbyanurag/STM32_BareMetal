@@ -1,2 +1,4 @@
-ST7735_Interfaces.c:10:6:LCD_Init	8	static
-ST7735_Interfaces.c:15:6:LCD_SetMode	4	static
+ST7735_Interfaces.c:11:9:SPI_TxByte	32	static
+ST7735_Interfaces.c:20:10:St7735_TFT_ReadID	16	static
+ST7735_Interfaces.c:65:6:LCD_TurnDisplayOff	8	static
+ST7735_Interfaces.c:81:6:LCD_TurnDisplayON	8	static

@@ -110,17 +110,17 @@ int main(void)
   uint32_t FLASH_ID;
 
 
-  W25qxx_EnableDataWrite();
-  RxData = W25qxx_readStatusRegister_1();
-  while(isWriteENableLatch_Set() != true);
-
-	W25qxx_EraseSector();
-	while(isBusyBit_Set()==true);
-	HAL_Delay(1000);
-	 W25qxx_EnableDataWrite();
-	 while(isWriteENableLatch_Set() != true);
-	W25qxx_PageProgram();
-	HAL_Delay(1000);
+//  W25qxx_EnableDataWrite();
+//  RxData = W25qxx_readStatusRegister_1();
+//  while(isWriteENableLatch_Set() != true);
+//
+//	W25qxx_EraseSector();
+//	while(isBusyBit_Set()==true);
+//	HAL_Delay(1000);
+//	 W25qxx_EnableDataWrite();
+//	 while(isWriteENableLatch_Set() != true);
+//	W25qxx_PageProgram();
+//	HAL_Delay(1000);
 
 
   while (1)
