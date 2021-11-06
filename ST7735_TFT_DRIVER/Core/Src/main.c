@@ -206,22 +206,22 @@ uint8_t r =  0 ;
 void  demoTFT ( void )
 {
 	ST7735_SetRotation (r);
-	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	HAL_Delay(1000);
-	 ST7735_FillScreen (ST7735_BLACK);
+//	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//	HAL_Delay(1000);
+//	 ST7735_FillScreen (ST7735_BLACK);
 
-	 for ( int x =  0 ; x < ST7735_GetWidth (); x ++ )
-	 {
-	   ST7735_DrawPixel (x, 0 , ST7735_WHITE);
-	   ST7735_DrawPixel (x, ST7735_GetHeight () -  1 , ST7735_WHITE);
-	 }
-
-	 for ( int y =  0 ; y < ST7735_GetHeight (); y ++ )
-	 {
-	   ST7735_DrawPixel ( 0 , y, ST7735_WHITE);
-	   ST7735_DrawPixel (ST7735_GetWidth () -  1 , y, ST7735_WHITE);
-	 }
-
+//	 for ( int x =  0 ; x < ST7735_GetWidth (); x ++ )
+//	 {
+//	   ST7735_DrawPixel (x, 0 , ST7735_WHITE);
+//	   ST7735_DrawPixel (x, ST7735_GetHeight () -  1 , ST7735_WHITE);
+//	 }
+//
+//	 for ( int y =  0 ; y < ST7735_GetHeight (); y ++ )
+//	 {
+//	   ST7735_DrawPixel ( 0 , y, ST7735_WHITE);
+//	   ST7735_DrawPixel (ST7735_GetWidth () -  1 , y, ST7735_WHITE);
+//	 }
+//
 	 ST7735_DrawLine ( 0 , 0 , ST7735_GetWidth (), ST7735_GetHeight (), ST7735_WHITE);
 	 ST7735_DrawLine (ST7735_GetWidth (), 0 , 0 , ST7735_GetHeight (), ST7735_WHITE);
 
@@ -239,10 +239,10 @@ void  demoTFT ( void )
 	  ST7735_DrawFastVLine (i, 0 , ST7735_GetHeight ()-1 , ST7735_WHITE);
 	 }
 
-	 HAL_Delay ( 2000 );
-
-	 // Check fonts
-	 ST7735_FillScreen (ST7735_BLACK);
+//	 HAL_Delay ( 2000 );
+//
+//	 // Check fonts
+//	 ST7735_FillScreen (ST7735_BLACK);
 	 ST7735_DrawString ( 0 , 0 , "Font_7x10, red on black, lorem ipsum dolor sit amet" , Font_7x10, ST7735_RED, ST7735_BLACK);
 	 ST7735_DrawString ( 0 , 3 * 10 , "Font_11x18, green, lorem ipsum" , Font_11x18, ST7735_GREEN, ST7735_BLACK);
 	 ST7735_DrawString ( 0 , 3 * 10 + 3 * 18 , "Font_16x26" , Font_16x26, ST7735_BLUE, ST7735_BLACK);
