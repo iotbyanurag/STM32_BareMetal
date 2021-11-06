@@ -1,0 +1,49 @@
+#include <ST7735.h>
+
+ void ST7735_write(uint8_t data) {
+
+
+	 HAL_SPI_Transmit(SPI_HandleTypeDef &hspi2, uint8_t &data, sizeof(data), 100);
+
+ }
+
+ void ST7735_cmd(uint8_t cmd) {
+
+	 // bring D/C line low
+	 HAL_GPIO_WritePin(DC_PORT, DC_PIN, GPIO_PIN_RESET);
+
+	 // then send the command
+	 ST7735_write(cmd);
+ }
+
+
+ void ST7735_data(uint8_t data) {
+
+	 HAL_GPIO_WritePin(DC_PORT, DC_PIN, GPIO_PIN_SET);
+	 ST7735_write(data);
+ }
+
+
+ void ST7735_Init(void) {
+
+	 // CS high
+	 // reset high
+	 HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_SET);
+	 HAL_GPIO_WritePin(RST_PORT, RST_PIN, GPIO_PIN_SET);
+	 HAL_delay(5);
+
+	 // reset low
+	 HAL_GPIO_WritePin(RST_PORT, RST_PIN, GPIO_PIN_RESET);
+	 HAL_delay(5);
+
+	 // Reset high
+	 // CS high
+
+	 HAL_GPIO_WritePin(RST_PORT, RST_PIN, GPIO_PIN_SET);
+	 HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_SET);
+	 HAL_delay(5);
+
+	 //CS low
+	 HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_RESET);
+
+ }

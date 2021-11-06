@@ -1,0 +1,26 @@
+/*
+ * ST7735_Interfaces.c
+ *
+ *  Created on: Sep 5, 2021
+ *      Author: anura
+ */
+#include "ST7735_Interfaces.h"
+
+extern SPI_HandleTypeDef hspi2;
+
+void LCD_Init(){
+
+	//SPI communication starts when CS goes low.
+	HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_RESET);
+
+	// Then D/CX pin goes low means the next byte is going to be command
+	HAL_GPIO_WritePin(DIN_PORT, DIN_PIN, GPIO_PIN_RESET);
+	HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size,
+	                                          uint32_t Timeout)
+
+
+}
+
+void LCD_SetMode(){
+
+}
